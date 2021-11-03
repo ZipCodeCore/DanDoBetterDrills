@@ -8,7 +8,8 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
-        return null;
+
+        return "Hello World";
     }
 
     /**
@@ -17,7 +18,7 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-        return null;
+        return firstSegment.concat(secondSegment);
     }
 
     /**
@@ -26,7 +27,8 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-        return null;
+
+        return firstSegment + secondSegment;
     }
 
     /**
@@ -34,7 +36,7 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        return null;
+         return input.substring(0, 2);
     }
 
     /**
@@ -42,7 +44,8 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+        return input.substring(input.length() - 2, input.length());
+
     }
 
     /**
@@ -51,7 +54,8 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+            if (inputValue.equals(comparableValue))
+                return true;
     }
 
     /**
@@ -59,7 +63,9 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+        int length = inputValue.length();
+        int middle = length / 2;
+        return inputValue.substring(middle); // not sure from here
     }
 
     /**
