@@ -4,11 +4,9 @@ package com.zipcodewilmington.danny_do_better_exercises;
  * Modified by kristofer 3/4/2024.
  */
 public class StringUtilities {
-    /**
-     * @return `Hello World` as a string
-     */
+
     public static String getHelloWorld() {
-        return null;
+        return "Hello World";
     }
 
     /**
@@ -17,7 +15,8 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-        return null;
+
+        return firstSegment.concat(secondSegment);
     }
 
     /**
@@ -26,7 +25,8 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-        return null;
+
+        return firstSegment + secondSegment;
     }
 
     /**
@@ -34,7 +34,8 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        return null;
+
+        return input.substring(0,2);
     }
 
     /**
@@ -42,8 +43,17 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
-    }
+            if ( input.length() < 3) {
+                return input;
+            } else {
+                return input.substring(input.length()-3);
+            }
+
+
+        }
+
+
+
 
     /**
      * @param inputValue the value to be compared
@@ -51,7 +61,7 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+        return (inputValue == comparableValue);
     }
 
     /**
@@ -59,7 +69,9 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+
+
+        return inputValue.charAt(inputValue.length()/2);
     }
 
     /**
@@ -67,7 +79,9 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+        int i = spaceDelimitedString.indexOf(' ');
+        String coffee = spaceDelimitedString.substring(0, i);
+        return coffee;
     }
 
     /**
@@ -83,6 +97,15 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+
+
+        String output = "";
+
+        for (int i = stringToReverse.length() - 1; i > 0; i--) {
+            output += stringToReverse.charAt(i);
+        }
+            return output;
+
+
     }
 }
