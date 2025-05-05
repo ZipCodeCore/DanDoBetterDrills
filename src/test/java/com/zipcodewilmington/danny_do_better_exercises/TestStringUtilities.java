@@ -52,6 +52,9 @@ public class TestStringUtilities {
         assertEquals(expected, actual);
     }
 
+
+
+
     @Test
     public void substringBeginTest(){
         // : Given
@@ -59,7 +62,7 @@ public class TestStringUtilities {
         String expected = "Hel";
 
         // : When
-        String actual = StringUtilities.getPrefix(input);
+        String actual = StringUtilities.getPrefix();
 
         // : Then
         assertEquals(expected, actual);
